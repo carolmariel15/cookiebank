@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                     self.txtClave.text = ""
                     
                 } else {
-                    let alertError = UIAlertController(title: "Error", message: "Error al registrar cuenta (6 caracteres minimo)", preferredStyle: .alert)
+                    let alertError = UIAlertController(title: "Error", message: "Error al registrar cuenta (contraseña 6 caracteres minimo)", preferredStyle: .alert)
                     
                     alertError.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     self.present(alertError, animated: true, completion: nil)

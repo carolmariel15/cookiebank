@@ -18,6 +18,10 @@
 		C5A63B03285FEF1200748DFF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C5A63B02285FEF1200748DFF /* FirebaseAuth */; };
 		C5A63B05285FEF1200748DFF /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C5A63B04285FEF1200748DFF /* FirebaseAuthCombine-Community */; };
 		C5A63B07285FEF1200748DFF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C5A63B06285FEF1200748DFF /* FirebaseFirestore */; };
+		C5F200BC28618D6A002244AF /* UsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F200BB28618D6A002244AF /* UsuarioViewController.swift */; };
+		C5F200C12861A8CA002244AF /* TarjetaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F200C02861A8CA002244AF /* TarjetaViewController.swift */; };
+		C5F200C32861A932002244AF /* TransaccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F200C22861A932002244AF /* TransaccionViewController.swift */; };
+		C5F200C52861A949002244AF /* CuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F200C42861A949002244AF /* CuentaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		C52E5B54285FE19000391EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52E5B56285FE19000391EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A63AFD285FEE1B00748DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5F200BB28618D6A002244AF /* UsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewController.swift; sourceTree = "<group>"; };
+		C5F200C02861A8CA002244AF /* TarjetaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetaViewController.swift; sourceTree = "<group>"; };
+		C5F200C22861A932002244AF /* TransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaccionViewController.swift; sourceTree = "<group>"; };
+		C5F200C42861A949002244AF /* CuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuentaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 		C52E5B47285FE18D00391EFE /* cookiebank */ = {
 			isa = PBXGroup;
 			children = (
+				C5F200BF2861A837002244AF /* tarjeta */,
+				C5F200BE2861A82D002244AF /* transaccion */,
+				C5F200BD2861A820002244AF /* cuenta */,
+				C5F200BA28618D32002244AF /* usuario */,
 				C52E5B48285FE18D00391EFE /* AppDelegate.swift */,
 				C52E5B4A285FE18D00391EFE /* SceneDelegate.swift */,
 				C52E5B4C285FE18D00391EFE /* ViewController.swift */,
@@ -76,6 +88,38 @@
 				C5A63AFD285FEE1B00748DFF /* GoogleService-Info.plist */,
 			);
 			path = cookiebank;
+			sourceTree = "<group>";
+		};
+		C5F200BA28618D32002244AF /* usuario */ = {
+			isa = PBXGroup;
+			children = (
+				C5F200BB28618D6A002244AF /* UsuarioViewController.swift */,
+			);
+			path = usuario;
+			sourceTree = "<group>";
+		};
+		C5F200BD2861A820002244AF /* cuenta */ = {
+			isa = PBXGroup;
+			children = (
+				C5F200C42861A949002244AF /* CuentaViewController.swift */,
+			);
+			path = cuenta;
+			sourceTree = "<group>";
+		};
+		C5F200BE2861A82D002244AF /* transaccion */ = {
+			isa = PBXGroup;
+			children = (
+				C5F200C22861A932002244AF /* TransaccionViewController.swift */,
+			);
+			path = transaccion;
+			sourceTree = "<group>";
+		};
+		C5F200BF2861A837002244AF /* tarjeta */ = {
+			isa = PBXGroup;
+			children = (
+				C5F200C02861A8CA002244AF /* TarjetaViewController.swift */,
+			);
+			path = tarjeta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52E5B4D285FE18D00391EFE /* ViewController.swift in Sources */,
+				C5F200BC28618D6A002244AF /* UsuarioViewController.swift in Sources */,
+				C5F200C32861A932002244AF /* TransaccionViewController.swift in Sources */,
+				C5F200C52861A949002244AF /* CuentaViewController.swift in Sources */,
+				C5F200C12861A8CA002244AF /* TarjetaViewController.swift in Sources */,
 				C52E5B49285FE18D00391EFE /* AppDelegate.swift in Sources */,
 				C52E5B4B285FE18D00391EFE /* SceneDelegate.swift in Sources */,
 			);
