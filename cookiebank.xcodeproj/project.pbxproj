@@ -13,7 +13,7 @@
 		C52E5B50285FE18D00391EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52E5B4E285FE18D00391EFE /* Main.storyboard */; };
 		C52E5B52285FE19000391EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52E5B51285FE19000391EFE /* Assets.xcassets */; };
 		C52E5B55285FE19000391EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52E5B53285FE19000391EFE /* LaunchScreen.storyboard */; };
-		C5A63AFE285FEE1B00748DFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5A63AFD285FEE1B00748DFF /* GoogleService-Info.plist */; };
+		C53DF4F9286424EF001E45DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C53DF4F8286424EF001E45DC /* GoogleService-Info.plist */; };
 		C5A63B01285FEF1200748DFF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C5A63B00285FEF1200748DFF /* FirebaseAnalytics */; };
 		C5A63B03285FEF1200748DFF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C5A63B02285FEF1200748DFF /* FirebaseAuth */; };
 		C5A63B05285FEF1200748DFF /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C5A63B04285FEF1200748DFF /* FirebaseAuthCombine-Community */; };
@@ -33,7 +33,7 @@
 		C52E5B51285FE19000391EFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C52E5B54285FE19000391EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52E5B56285FE19000391EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5A63AFD285FEE1B00748DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C53DF4F8286424EF001E45DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C5F200BB28618D6A002244AF /* UsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewController.swift; sourceTree = "<group>"; };
 		C5F200C02861A8CA002244AF /* TarjetaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetaViewController.swift; sourceTree = "<group>"; };
 		C5F200C22861A932002244AF /* TransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaccionViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				C52E5B51285FE19000391EFE /* Assets.xcassets */,
 				C52E5B53285FE19000391EFE /* LaunchScreen.storyboard */,
 				C52E5B56285FE19000391EFE /* Info.plist */,
-				C5A63AFD285FEE1B00748DFF /* GoogleService-Info.plist */,
+				C53DF4F8286424EF001E45DC /* GoogleService-Info.plist */,
 			);
 			path = cookiebank;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52E5B55285FE19000391EFE /* LaunchScreen.storyboard in Resources */,
-				C5A63AFE285FEE1B00748DFF /* GoogleService-Info.plist in Resources */,
+				C53DF4F9286424EF001E45DC /* GoogleService-Info.plist in Resources */,
 				C52E5B52285FE19000391EFE /* Assets.xcassets in Resources */,
 				C52E5B50285FE18D00391EFE /* Main.storyboard in Resources */,
 			);
