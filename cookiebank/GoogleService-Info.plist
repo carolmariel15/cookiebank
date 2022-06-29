@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1071693546245-7nrvh91joiuo63o3lj52gs1a80q76ptt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1071693546245-7nrvh91joiuo63o3lj52gs1a80q76ptt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCFC-s3Mlq6p03_LdNDtMKSbRu5Q_te3qs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1071693546245</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cibertec.cookiebank</string>
+	<key>PROJECT_ID</key>
+	<string>cookiebank-cibertec</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cookiebank-cibertec.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1071693546245:ios:e8c66d209f85b665cf2d6c</string>
+</dict>
+</plist>
