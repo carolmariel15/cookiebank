@@ -51,7 +51,7 @@
                                                     <color key="titleColor" red="0.93688522860000001" green="0.93688522860000001" blue="0.93688522860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="QiS-dM-RAY" kind="show" id="gI6-lY-F83"/>
+                                                    <segue destination="Nxh-Zx-dVC" kind="show" id="T6A-mc-s5e"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -88,17 +88,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZq-nP-u4p">
-                                <rect key="frame" x="189" y="782" width="37" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" image="arrow.forward" catalog="system">
-                                    <color key="titleColor" systemColor="systemIndigoColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Nxh-Zx-dVC" kind="show" id="E40-UE-EbY"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHX-7w-GyB">
                                 <rect key="frame" x="30" y="244" width="354" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,19 +153,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwS-xp-HFM">
+                                <rect key="frame" x="176" y="707" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Registrar"/>
+                                <connections>
+                                    <action selector="registrar:" destination="bWe-Ne-Cds" eventType="touchUpInside" id="4Ps-zJ-MZp"/>
+                                    <action selector="registrar:" destination="QiS-dM-RAY" eventType="touchUpInside" id="86X-w1-KbO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clave de internet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lty-UT-Prs">
+                                <rect key="frame" x="30" y="572" width="129" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jAI-a7-DX5">
+                                <rect key="frame" x="30" y="601" width="354" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sLh-gB-7Cg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registro" id="iun-NN-2Ws"/>
                     <connections>
-                        <outlet property="txtClaveInternet" destination="jAI-a7-DX5" id="7A7-Il-SSO"/>
-                        <outlet property="txtEmail" destination="3IO-Ll-zmo" id="Hkt-rG-RcD"/>
+                        <outlet property="txtApellido" destination="Tzl-8Y-8Kw" id="HFS-M7-zqh"/>
+                        <outlet property="txtCelular" destination="NqV-CU-e2u" id="hJD-MQ-kAg"/>
+                        <outlet property="txtClaveInternet" destination="jAI-a7-DX5" id="0Y9-qY-jDX"/>
+                        <outlet property="txtDni" destination="U6F-p0-o6e" id="yKM-YQ-e64"/>
+                        <outlet property="txtEmail" destination="3IO-Ll-zmo" id="FhM-Un-Yvg"/>
+                        <outlet property="txtNombre" destination="zjF-lb-NM4" id="Elv-fL-qgH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCt-Dy-ADZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.71014492753625" y="766.74107142857144"/>
+            <point key="canvasLocation" x="1819" y="777"/>
         </scene>
         <!--Usu Tarjeta View Controller-->
         <scene sceneID="ZWk-Jd-vuN">
@@ -218,19 +233,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clave de internet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lty-UT-Prs">
-                                <rect key="frame" x="30" y="437" width="129" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jAI-a7-DX5">
-                                <rect key="frame" x="30" y="466" width="354" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Numero de tarjeta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWg-qc-dtY">
                                 <rect key="frame" x="30" y="180" width="138" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -251,12 +253,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwS-xp-HFM">
-                                <rect key="frame" x="176" y="580" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZq-nP-u4p">
+                                <rect key="frame" x="189" y="671" width="37" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Registrar"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="arrow.forward" catalog="system">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="registrar:" destination="bWe-Ne-Cds" eventType="touchUpInside" id="4Ps-zJ-MZp"/>
+                                    <action selector="registrarUsuFirebase:" destination="QiS-dM-RAY" eventType="touchUpInside" id="BxK-Yc-kKX"/>
+                                    <action selector="validarTarjeta:" destination="Nxh-Zx-dVC" eventType="touchUpInside" id="FkC-iV-qVc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -268,7 +274,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vT6-ls-4CN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="bWe-Ne-Cds" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="767"/>
+            <point key="canvasLocation" x="875" y="759"/>
         </scene>
         <!--Menu-->
         <scene sceneID="88v-L8-Ghy">
@@ -318,6 +324,9 @@
                                 <state key="normal" title="Button">
                                     <imageReference key="image" image="escape" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="cerrarSesion:" destination="Glk-UC-N88" eventType="touchUpInside" id="Tus-aO-TQ6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RAs-0h-OFi"/>

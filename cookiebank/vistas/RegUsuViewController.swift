@@ -6,18 +6,48 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class RegUsuViewController: UIViewController {
 
+    @IBOutlet weak var txtDni: UITextField!
+    @IBOutlet weak var txtNombre: UITextField!
+    @IBOutlet weak var txtApellido: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtCelular: UITextField!
+    @IBOutlet weak var txtClaveInternet: UITextField!
+    
+    var existe: String = "No"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-    /*func registrarAuth () -> (String) {
+    @IBAction func registrar(_ sender: Any) {
+        let usuarioSave = ["dni": txtDni.text!, "email": txtEmail.text!, "nombres": txtNombre.text!, "apellidos": txtApellido.text!, "celular": Int(txtCelular.text!)!] as [String: Any]
+        
+        let db = Firestore.firestore()
+        
+        if (existe == "Ok") {
+            db.collection("usuario").addDocument(data: usuarioSave) {err in
+                if let err = err {
+                    print("Error al registrar")
+                } else {
+                    self.registrarAuth()
+                    print("Se registro correctamente")
+                }
+            }
+        } else {
+            print("La tarjeta ingresada no es valida")
+        }
+        
+        
+    }
+    
+    func registrarAuth () -> (String) {
         var mensajeAlert = ""
         
         if let email = txtEmail.text, let clave = txtClaveInternet.text {
@@ -45,9 +75,7 @@ class RegUsuViewController: UIViewController {
         }
         
         return mensajeAlert
-    }*/
-    
-    
+    }
     
 
 }

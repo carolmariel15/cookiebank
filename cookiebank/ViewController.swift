@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtClave: UITextField!
     @IBOutlet weak var btnIngresar: UIButton!
     
+    private let usuario: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,14 +27,19 @@ class ViewController: UIViewController {
                 if let result = result, error == nil {
                     let alertSuccess = UIAlertController(title: "Bienvenido(a)", message: "Inicio sesion correctamente", preferredStyle: .alert)
                     
-                    alertSuccess.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    UserDefaults.standard.set(email, forKey: self.usuario)
+                    UserDefaults.standard.synchronize()
+                    
+                    alertSuccess.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {_ in
+                        self.entrarMenu()
+                    }))
                     self.present(alertSuccess, animated: true, completion: nil)
                     self.txtEmail.text = ""
                     self.txtClave.text = ""
                     
                 }
                 else {
-                    let alertError = UIAlertController(title: "Error", message: "Error al iniciar sesion (clave 6 caracteres minimo)", preferredStyle: .alert)
+                    let alertError = UIAlertController(title: "Error", message: "Error al iniciar sesion", preferredStyle: .alert)
                     
                     alertError.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     self.present(alertError, animated: true, completion: nil)
@@ -41,6 +48,12 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    
+    func entrarMenu() {
+        let vc = self.storyboard?.instantiateViewController(identifier: "MenuViewController") as! MenuViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
  
