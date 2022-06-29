@@ -1,13 +1,13 @@
 //
-//  TarjetaViewController.swift
+//  MenuViewController.swift
 //  cookiebank
 //
-//  Created by Carol Mariel on 21/06/22.
+//  Created by Carol Mariel
 //
 
 import UIKit
 
-class TarjetaViewController: UIViewController {
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

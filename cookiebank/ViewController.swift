@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func login(_ sender: Any) {
         if let email = txtEmail.text, let clave = txtClave.text {
             Auth.auth().signIn(withEmail: email, password: clave) {
@@ -40,6 +39,8 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+        
     }
     
  

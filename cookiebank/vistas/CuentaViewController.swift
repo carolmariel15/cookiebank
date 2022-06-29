@@ -1,13 +1,13 @@
 //
-//  TransaccionViewController.swift
+//  CuentaViewController.swift
 //  cookiebank
 //
-//  Created by Carol Mariel on 21/06/22.
+//  Created by Carol Mariel
 //
 
 import UIKit
 
-class TransaccionViewController: UIViewController {
+class CuentaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

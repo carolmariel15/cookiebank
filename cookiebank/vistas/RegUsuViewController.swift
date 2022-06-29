@@ -1,26 +1,23 @@
 //
-//  UsuarioViewController.swift
+//  RegUsuViewController.swift
 //  cookiebank
 //
-//  Created by Carol Mariel on 20/06/22.
+//  Created by Carol Mariel
 //
 
 import UIKit
-import FirebaseAuth
 
-class UsuarioViewController: UIViewController {
+class RegUsuViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
-    @IBOutlet weak var txtClaveInternet: UITextField!
-    @IBOutlet weak var btnRegistrar: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
     
-    func registrarAuth () -> (String) {
+    /*func registrarAuth () -> (String) {
         var mensajeAlert = ""
         
         if let email = txtEmail.text, let clave = txtClaveInternet.text {
@@ -48,14 +45,9 @@ class UsuarioViewController: UIViewController {
         }
         
         return mensajeAlert
-    }
+    }*/
     
-
-    @IBAction func registrar(_ sender: Any) {
-        
-        let x = registrarAuth()
-        
-    }
+    
     
 
 }
