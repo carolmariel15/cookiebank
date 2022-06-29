@@ -58,7 +58,9 @@ class RegUsuViewController: UIViewController {
                     
                     let alertSuccess = UIAlertController(title: "Bienvenido(a)", message: "Se registro correctamente", preferredStyle: .alert)
                     
-                    alertSuccess.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    alertSuccess.addAction(UIAlertAction(title: "Aceptar", style: .default, handler:{_ in
+                        self.volverLogin()
+                    }))
                     self.present(alertSuccess, animated: true, completion: nil)
                     self.txtEmail.text = ""
                     self.txtClaveInternet.text = ""
@@ -77,5 +79,9 @@ class RegUsuViewController: UIViewController {
         return mensajeAlert
     }
     
-
+    
+    func volverLogin(){
+        let vc = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
