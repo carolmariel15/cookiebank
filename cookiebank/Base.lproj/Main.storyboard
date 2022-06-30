@@ -271,10 +271,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="3dy-Es-7jb"/>
                     <connections>
-                        <outlet property="txtClave" destination="Yl5-qz-q2e" id="WeF-BZ-SxT"/>
-                        <outlet property="txtCvc" destination="Yl5-qz-q2e" id="lSB-ZD-U8H"/>
-                        <outlet property="txtFchVencimiento" destination="qhB-WA-l3S" id="gZJ-Ru-bFd"/>
-                        <outlet property="txtTarjeta" destination="qhB-WA-l3S" id="jxi-GI-PhM"/>
+                        <outlet property="txtClave" destination="Yl5-qz-q2e" id="IgW-1J-sly"/>
+                        <outlet property="txtCvc" destination="uow-LU-WBl" id="ZZo-qP-8eE"/>
+                        <outlet property="txtFchVencimiento" destination="qhB-WA-l3S" id="M9d-yd-9a8"/>
+                        <outlet property="txtTarjeta" destination="9Qj-eh-Y83" id="58B-gN-8d8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vT6-ls-4CN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

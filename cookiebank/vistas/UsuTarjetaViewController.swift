@@ -15,8 +15,12 @@ class UsuTarjetaViewController: UIViewController {
     @IBOutlet weak var txtCvc: UITextField!
     @IBOutlet weak var txtClave: UITextField!
     
+    var idTarjeta: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        idTarjeta = txtTarjeta.text!
         
     }
     
@@ -24,9 +28,11 @@ class UsuTarjetaViewController: UIViewController {
     @IBAction func validarTarjeta(_ sender: Any) {
         let db = Firestore.firestore()
         
-        db.collection("tarjeta").document(txtTarjeta.text!).getDocument{
+        db.collection("tarjeta").document(self.idTarjeta).getDocument{
             (document, error) in
             if let document = document, document.exists{
+                print(document.documentID)
+                
                 let tarjeta = Tarjeta(idTarjeta: document.documentID, tipo: document.data()!["tipo"] as! String, clave: document.data()!["clave"] as! Int, fchVencimiento: document.data()!["fchVencimiento"] as! String, fchRegistro: document.data()!["fchRegistro"] as! Date, cvc: document.data()!["cvc"] as! Int)
                 
                 self.validaTarjetaExistente(tarjeta: tarjeta)
