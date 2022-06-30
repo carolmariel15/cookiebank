@@ -13,10 +13,10 @@ class DetCuentaViewController: UIViewController {
     @IBOutlet weak var txtIdCuenta: UILabel!
     @IBOutlet weak var txtSaldo: UILabel!
     
-    var cuenta: Cuenta = Cuenta(idCuenta: 0, tipo: "", idTarjeta: 0, dni: "", saldo: 0.0)
+    var cuenta: Cuenta = Cuenta(idCuenta: "", tipo: "", idTarjeta: "", dni: "", saldo: 0.0)
     
     var dni: String = ""
-    var idTarjeta: Int = 0
+    var idTarjeta: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class DetCuentaViewController: UIViewController {
         self.idTarjeta = cuenta.idTarjeta
         txtTipocuenta.text = String(cuenta.tipo)
         txtIdCuenta.text = String(cuenta.idCuenta)
-        txtSaldo.text = String(cuenta.saldo)
+        txtSaldo.text = "S/. \(String(cuenta.saldo))"
     }
     
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		765AED64286E4521005847BA /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765AED63286E4521005847BA /* FavoritosViewController.swift */; };
+		765AED66286E4536005847BA /* Favorito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765AED65286E4536005847BA /* Favorito.swift */; };
+		765AED68286E4D20005847BA /* FavoritoFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765AED67286E4D20005847BA /* FavoritoFormViewController.swift */; };
 		766F0FDB286D703F00396E13 /* TarjetaFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766F0FDA286D703F00396E13 /* TarjetaFormViewController.swift */; };
 		766F0FE1286DB2FF00396E13 /* Tarjetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766F0FE0286DB2FF00396E13 /* Tarjetas.swift */; };
 		C52CD63D286CCE6D00D11C32 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CD63C286CCE6D00D11C32 /* Usuario.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		765AED63286E4521005847BA /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		765AED65286E4536005847BA /* Favorito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorito.swift; path = cookiebank/vistas/Favorito.swift; sourceTree = SOURCE_ROOT; };
+		765AED67286E4D20005847BA /* FavoritoFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoFormViewController.swift; sourceTree = "<group>"; };
 		766F0FDA286D703F00396E13 /* TarjetaFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetaFormViewController.swift; sourceTree = "<group>"; };
 		766F0FE0286DB2FF00396E13 /* Tarjetas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarjetas.swift; sourceTree = "<group>"; };
 		C52CD63C286CCE6D00D11C32 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
@@ -120,6 +126,8 @@
 				C55CEB6E286CBF4E007227A3 /* RegUsuViewController.swift */,
 				C52CD646286D3DDB00D11C32 /* DetCuentaViewController.swift */,
 				766F0FDA286D703F00396E13 /* TarjetaFormViewController.swift */,
+				765AED63286E4521005847BA /* FavoritosViewController.swift */,
+				765AED67286E4D20005847BA /* FavoritoFormViewController.swift */,
 			);
 			path = vistas;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 				C52CD640286CCE8C00D11C32 /* Cuenta.swift */,
 				C52CD642286CCE9C00D11C32 /* Tarjeta.swift */,
 				766F0FE0286DB2FF00396E13 /* Tarjetas.swift */,
+				765AED65286E4536005847BA /* Favorito.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -220,14 +229,17 @@
 				C5F200BC28618D6A002244AF /* UsuarioViewController.swift in Sources */,
 				C5F200C32861A932002244AF /* TransaccionViewController.swift in Sources */,
 				C55CEB6F286CBF4E007227A3 /* RegUsuViewController.swift in Sources */,
+				765AED68286E4D20005847BA /* FavoritoFormViewController.swift in Sources */,
 				C52CD641286CCE8C00D11C32 /* Cuenta.swift in Sources */,
 				C5F200C52861A949002244AF /* CuentaViewController.swift in Sources */,
 				C5F200C12861A8CA002244AF /* TarjetaViewController.swift in Sources */,
 				C52CD647286D3DDB00D11C32 /* DetCuentaViewController.swift in Sources */,
+				765AED64286E4521005847BA /* FavoritosViewController.swift in Sources */,
 				766F0FDB286D703F00396E13 /* TarjetaFormViewController.swift in Sources */,
 				C55CEB6D286CBED9007227A3 /* UsuTarjetaViewController.swift in Sources */,
 				C52E5B49285FE18D00391EFE /* AppDelegate.swift in Sources */,
 				C52E5B4B285FE18D00391EFE /* SceneDelegate.swift in Sources */,
+				765AED66286E4536005847BA /* Favorito.swift in Sources */,
 				C52CD63F286CCE7E00D11C32 /* Transaccion.swift in Sources */,
 				C55CEB6B286CBEBA007227A3 /* MenuViewController.swift in Sources */,
 				766F0FE1286DB2FF00396E13 /* Tarjetas.swift in Sources */,

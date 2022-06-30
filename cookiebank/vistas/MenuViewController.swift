@@ -22,7 +22,7 @@ class MenuViewController: UIViewController {
     func buscarDniUsuario() {
         var dniList = [String]()
         var documentList = [String]()
-        if let email = UserDefaults.standard.string(forKey: "self.usuario") {
+        if let email = UserDefaults.standard.string(forKey: self.usuario) {
     
             Firestore.firestore().collection("usuario").whereField("email", isEqualTo: email).getDocuments() { (querySnapshot, err) in
                 if let err = err {

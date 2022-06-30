@@ -46,7 +46,8 @@ class CuentaViewController: UIViewController, UITableViewDelegate, UITableViewDa
             } else {
                 for document in
                     querySnapshot!.documents{
-                    let cuenta = Cuenta(idCuenta: document.data()["idCuenta"] as! Int, tipo: document.data()["tipo"] as! String, idTarjeta: document.data()["idTarjeta"] as! Int, dni: document.data()["dni"] as! String, saldo: document.data()["saldo"] as! Double)
+                    let cuenta = Cuenta(idCuenta: document.documentID, tipo: document.data()["tipo"] as! String, idTarjeta: document.data()["idTarjeta"] as! String, dni: document.data()["dni"] as! String, saldo: document.data()["saldo"] as! Double)
+                    
                     self.lista.append(cuenta)
                     self.tabla.reloadData()
                 }

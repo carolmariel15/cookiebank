@@ -9,13 +9,13 @@ import Foundation
 
 class Cuenta {
 
-    var idCuenta: Int
+    var idCuenta: String
     var tipo: String
-    var idTarjeta: Int
+    var idTarjeta: String
     var dni: String
     var saldo: Double
     
-    init(idCuenta: Int, tipo: String, idTarjeta: Int, dni: String, saldo: Double) {
+    init(idCuenta: String, tipo: String, idTarjeta: String, dni: String, saldo: Double) {
         self.idCuenta = idCuenta
         self.tipo = tipo
         self.idTarjeta = idTarjeta
@@ -24,11 +24,9 @@ class Cuenta {
     }
     
     func toString() -> String {
-        let tarjeta = String(idTarjeta)
-        let index: String.Index = tarjeta.index(tarjeta.endIndex, offsetBy: 13)
-        let result: String = tarjeta.substring(to: index)
+       
         
-        return "\(tipo) - ***\(result) - \(saldo)"
+        return "\(tipo) - \(idTarjeta) - \(saldo)"
     }
     
 }
