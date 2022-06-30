@@ -12,6 +12,7 @@ class MenuViewController: UIViewController {
     
     private let usuario: String = ""
     private var dni: String = ""
+    private var documentUsu: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +30,13 @@ class MenuViewController: UIViewController {
                 } else {
                     for document in querySnapshot!.documents {
                         self.dni = document.data()["dni"] as! String
+                        self.documentUsu = document.documentID
                     }
                 }
             }
             UserDefaults.standard.removeObject(forKey: self.usuario)
             UserDefaults.standard.set(dni, forKey: self.dni)
+            UserDefaults.standard.set(documentUsu, forKey: self.documentUsu)
             UserDefaults.standard.synchronize()
             print(dni)
         } else {
