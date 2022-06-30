@@ -23,4 +23,12 @@ class Cuenta {
         self.saldo = saldo
     }
     
+    func toString() -> String {
+        let tarjeta = String(idTarjeta)
+        let index: String.Index = tarjeta.index(tarjeta.endIndex, offsetBy: 13)
+        let result: String = tarjeta.substring(to: index)
+        
+        return "\(tipo) - ***\(result) - \(saldo)"
+    }
+    
 }
