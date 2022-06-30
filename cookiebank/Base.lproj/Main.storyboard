@@ -201,12 +201,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Qj-eh-Y83">
-                                <rect key="frame" x="30" y="209" width="354" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MM/AA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0J-aD-p3X">
                                 <rect key="frame" x="30" y="266" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -265,6 +259,12 @@
                                     <action selector="validarTarjeta:" destination="Nxh-Zx-dVC" eventType="touchUpInside" id="FkC-iV-qVc"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eY-Wq-p5O">
+                                <rect key="frame" x="30" y="209" width="354" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3R4-gx-kyM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -274,13 +274,13 @@
                         <outlet property="txtClave" destination="Yl5-qz-q2e" id="IgW-1J-sly"/>
                         <outlet property="txtCvc" destination="uow-LU-WBl" id="ZZo-qP-8eE"/>
                         <outlet property="txtFchVencimiento" destination="qhB-WA-l3S" id="M9d-yd-9a8"/>
-                        <outlet property="txtTarjeta" destination="9Qj-eh-Y83" id="58B-gN-8d8"/>
+                        <outlet property="txtTarjeta" destination="4eY-Wq-p5O" id="eLb-ne-SPI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vT6-ls-4CN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="bWe-Ne-Cds" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="875" y="759"/>
+            <point key="canvasLocation" x="873.91304347826099" y="758.70535714285711"/>
         </scene>
         <!--Menu-->
         <scene sceneID="88v-L8-Ghy">

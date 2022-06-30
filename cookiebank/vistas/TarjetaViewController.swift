@@ -46,7 +46,7 @@ class TarjetaViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 print("Error al traer las tarjetas: \(err)")
             }else{
                 for document in querySnapshot!.documents{
-                    let tarjeta = Tarjeta(idTarjeta: document.documentID  , tipo: document.data()["tipo"] as! String, clave: document.data()["clave"] as! Int, fchVencimiento: document.data()["fchVencimiento"] as! String, fchRegistro: document.data()["fchRegistro"] as! String, cvc: document.data()["cvc"] as! Int)
+                    let tarjeta = Tarjeta(idTarjeta: document.documentID  , tipo: document.data()["tipo"] as! String, clave: document.data()["clave"] as! Int, fchVencimiento: document.data()["fchVencimiento"] as! String, fchRegistro: document.data()["fchRegistro"] as! String, cvc: document.data()["cvc"] as! Int,dni: document.data()["dni"] as! String)
                     
                     self.listaTarjetas.append(tarjeta)
                     self.tablaTarjetas.reloadData()
