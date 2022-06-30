@@ -57,6 +57,8 @@ class TarjetaViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        
+        
         let destinationVc = segue.destination as! TarjetaFormViewController
         destinationVc.tarjetaForm.idTarjeta = "12345645678910"
         

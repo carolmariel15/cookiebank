@@ -33,7 +33,7 @@ class UsuarioViewController: UIViewController {
                     self.lblNombre.text = (document.data()!["nombres"] as! String)
                     self.lblApellido.text = (document.data()!["apellidos"] as! String)
                     self.lblEmail.text = (document.data()!["email"] as! String)
-                    self.lblCelular.text = (document.data()!["celular"] as! String)
+                    self.lblCelular.text = String(document.data()!["celular"] as! Int)
                     
                 } else {
                     print("No se encontro al usuario")
@@ -78,9 +78,12 @@ class UsuarioViewController: UIViewController {
     }
 
     func editarDatosUsuario(nombre: String, apellido: String, celular: String){
+        
+        if let documentUs = UserDefaults.standard.string(forKey: self.documentUsu) {
+        
         let usuarioEdit = ["dni": lblDni.text!, "email": lblEmail.text!, "nombres": nombre, "apellidos": apellido, "celular": Int(celular)!] as [String: Any]
         
-        Firestore.firestore().collection("usuario").document(self.documentUsu).setData(usuarioEdit) { err in
+        Firestore.firestore().collection("usuario").document(documentUs).setData(usuarioEdit) { err in
             if let err = err {
                 let alert = UIAlertController(title: "Error", message: "No se pudo editar", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Aceptar", style: .default))
@@ -94,7 +97,9 @@ class UsuarioViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
-            
+        }else{
+            print("el Usuario es Null")
+        }
         
     }
     

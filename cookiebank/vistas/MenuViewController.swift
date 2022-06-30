@@ -14,8 +14,7 @@ class MenuViewController: UIViewController {
     private var dni: String = ""
     private var documentUsu: String = ""
     
-    var dniList = [String]()
-    var documentList = [String]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +24,8 @@ class MenuViewController: UIViewController {
     }
     
     func buscarDniUsuario() {
+        var dniList = [String]()
+        var documentList = [String]()
         if let email = UserDefaults.standard.string(forKey: self.usuario) {
     
             Firestore.firestore().collection("usuario").whereField("email", isEqualTo: email).getDocuments() { (querySnapshot, err) in
@@ -32,20 +33,19 @@ class MenuViewController: UIViewController {
                     print("No se encontro el usuario")
                 } else {
                     for document in querySnapshot!.documents {
-                        let dni = document.data()["dni"] as! String
-                        let doc = document.documentID
-                        self.dniList.append(dni)
-                        self.documentList.append(doc)
+                       let dni = document.data()["dni"] as! String
+                       let doc = document.documentID
+                        dniList.append(dni)
+                        documentList.append(doc)
+                        UserDefaults.standard.set(dniList[0], forKey: self.dni)
+                         UserDefaults.standard.set(documentList[0], forKey: self.documentUsu)
                     }
                 }
             }
             UserDefaults.standard.removeObject(forKey: self.usuario)
-            UserDefaults.standard.set(self.dniList[0], forKey: self.dni)
-            UserDefaults.standard.set(self.documentList[0], forKey: self.documentUsu)
+    
             UserDefaults.standard.synchronize()
             
-            print("dni \(self.dniList[0])")
-            print("document \(self.documentList[0])")
         } else {
             print ("Email es null")
         }

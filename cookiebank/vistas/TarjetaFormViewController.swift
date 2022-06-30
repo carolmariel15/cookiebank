@@ -17,6 +17,8 @@ class TarjetaFormViewController: UIViewController {
     
     var tarjetaForm: Tarjeta = Tarjeta(idTarjeta: "", tipo: "", clave: 0, fchVencimiento: "", fchRegistro: "", cvc: 0, dni: "")
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +34,8 @@ class TarjetaFormViewController: UIViewController {
         txtTipo.text = String(tarjetaForm.tipo)
     }
     
-
+  
+    
    
 
 }
