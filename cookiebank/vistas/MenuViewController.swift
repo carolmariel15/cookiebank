@@ -11,10 +11,6 @@ import FirebaseFirestore
 class MenuViewController: UIViewController {
     
     private let usuario: String = ""
-    private var dni: String = ""
-    private var documentUsu: String = ""
-    
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +33,8 @@ class MenuViewController: UIViewController {
                        let doc = document.documentID
                         dniList.append(dni)
                         documentList.append(doc)
-                        UserDefaults.standard.set(dniList[0], forKey: self.dni)
-                         UserDefaults.standard.set(documentList[0], forKey: self.documentUsu)
+                        UserDefaults.standard.set(dniList[0], forKey: "dni")
+                         UserDefaults.standard.set(documentList[0], forKey: "documentUsu")
                     }
                 }
             }
@@ -55,7 +51,7 @@ class MenuViewController: UIViewController {
         let alert = UIAlertController(title: "Cerrar sesion", message: "¿Seguro que desea cerrar sesion?", preferredStyle: .alert)
         
         let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: {_ in
-            UserDefaults.standard.removeObject(forKey: self.dni)
+            UserDefaults.standard.removeObject(forKey: "dni")
             UserDefaults.standard.synchronize()
             
             self.volverLogin()

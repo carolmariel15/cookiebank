@@ -13,7 +13,6 @@ class CuentaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tabla: UITableView!
     
     var lista = [Cuenta]()
-    var dni = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,7 @@ class CuentaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func obtenerCuentas() {
-        if let dniUsu = UserDefaults.standard.string(forKey: dni) {
+        if let dniUsu = UserDefaults.standard.string(forKey: "dni") {
     
             Firestore.firestore().collection("cuenta").whereField("dni", isEqualTo: dniUsu).getDocuments() { (querySnapshot, err) in
         

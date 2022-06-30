@@ -16,8 +16,6 @@ class UsuarioViewController: UIViewController {
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblCelular: UILabel!
     
-    private var documentUsu: String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +23,7 @@ class UsuarioViewController: UIViewController {
     }
     
     func obtenerDatosUsuario() {
-        if let documentUs = UserDefaults.standard.string(forKey: self.documentUsu) {
+        if let documentUs = UserDefaults.standard.string(forKey: "documentUsu") {
             Firestore.firestore().collection("usuario").document(documentUs).getDocument{
                 (document, error) in
                 if let document = document, document.exists {
@@ -79,7 +77,7 @@ class UsuarioViewController: UIViewController {
 
     func editarDatosUsuario(nombre: String, apellido: String, celular: String){
         
-        if let documentUs = UserDefaults.standard.string(forKey: self.documentUsu) {
+        if let documentUs = UserDefaults.standard.string(forKey: "documentUsu") {
         
         let usuarioEdit = ["dni": lblDni.text!, "email": lblEmail.text!, "nombres": nombre, "apellidos": apellido, "celular": Int(celular)!] as [String: Any]
         
