@@ -16,7 +16,7 @@ class UsuarioViewController: UIViewController {
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblCelular: UILabel!
     
-    private let documentUsu: String = ""
+    private var documentUsu: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

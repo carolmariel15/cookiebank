@@ -37,7 +37,7 @@ class CuentaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func obtenerCuentas() {
         if let dniUsu = UserDefaults.standard.string(forKey: dni) {
     
-        Firestore.firestore().collection("cuenta").whereField("dni", isEqualTo: dniUsu).getDocuments() { (querySnapshot, err) in
+            Firestore.firestore().collection("cuenta").whereField("dni", isEqualTo: dniUsu).getDocuments() { (querySnapshot, err) in
         
             self.lista.removeAll()
             
@@ -50,10 +50,8 @@ class CuentaViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     let cuenta = Cuenta(idCuenta: document.data()["idCuenta"] as! Int, tipo: document.data()["tipo"] as! String, idTarjeta: document.data()["idTarjeta"] as! Int, dni: document.data()["dni"] as! String, saldo: document.data()["saldo"] as! Double)
                     self.lista.append(cuenta)
                     self.tabla.reloadData()
-                
                 }
-            }
-            }
+            }}
         }
     }
     
@@ -67,7 +65,15 @@ class CuentaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         ver.backgroundColor = UIColor.lightGray
         
-        return [ver]
+        let eliminar = UITableViewRowAction(style: .destructive, title: "Eliminar") {
+            (action, indexPath) in
+            let cuentaReference = Firestore.firestore().collection("cuenta")
+                .document(String(self.lista[indexPath.row].idCuenta))
+            cuentaReference.delete()
+            self.obtenerCuentas()
+        }
+        
+        return [ver, eliminar]
     }
 
 }

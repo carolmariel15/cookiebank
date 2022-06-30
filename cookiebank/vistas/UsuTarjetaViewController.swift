@@ -14,21 +14,16 @@ class UsuTarjetaViewController: UIViewController {
     @IBOutlet weak var txtFchVencimiento: UITextField!
     @IBOutlet weak var txtCvc: UITextField!
     @IBOutlet weak var txtClave: UITextField!
-    
     @IBOutlet weak var txtTarjeta: UITextField!
-    var idTarjeta: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        idTarjeta = txtTarjeta.text!
-        
     }
-    
     
     @IBAction func validarTarjeta(_ sender: Any) {
         let db = Firestore.firestore()
-        print("aquiii\(txtTarjeta.text!)")
+
         db.collection("tarjeta").document(txtTarjeta.text!).getDocument{
             (document, error) in
             if let document = document, document.exists{
