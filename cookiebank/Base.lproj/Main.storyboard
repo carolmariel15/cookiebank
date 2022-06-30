@@ -518,7 +518,7 @@
             </objects>
             <point key="canvasLocation" x="4486.9565217391309" y="-363.61607142857139"/>
         </scene>
-        <!--Tarjeta View Controller-->
+        <!--Tarjetas-->
         <scene sceneID="cgv-Gm-bKp">
             <objects>
                 <viewController storyboardIdentifier="TarjetaViewController" id="UbG-S2-q6z" customClass="TarjetaViewController" customModule="cookiebank" customModuleProvider="target" sceneMemberID="viewController">
@@ -526,22 +526,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tarjetas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-A2-GfW">
-                                <rect key="frame" x="147" y="401" width="57" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lSb-Wj-ekM">
+                                <rect key="frame" x="15" y="59" width="384" height="788"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="ugE-mb-Fzh" style="IBUITableViewCellStyleDefault" id="sJY-Bl-gyd">
+                                        <rect key="frame" x="0.0" y="24.5" width="384" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sJY-Bl-gyd" id="nSj-W9-UTA">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ugE-mb-Fzh">
+                                                    <rect key="frame" x="20" y="0.0" width="344" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hAi-5G-bNm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hAi-5G-bNm" firstAttribute="bottom" secondItem="lSb-Wj-ekM" secondAttribute="bottom" constant="15" id="F0I-aj-5V6"/>
+                            <constraint firstItem="hAi-5G-bNm" firstAttribute="trailing" secondItem="lSb-Wj-ekM" secondAttribute="trailing" constant="15" id="URu-y3-KCT"/>
+                            <constraint firstItem="lSb-Wj-ekM" firstAttribute="top" secondItem="hAi-5G-bNm" secondAttribute="top" constant="15" id="cNv-kT-vj9"/>
+                            <constraint firstItem="lSb-Wj-ekM" firstAttribute="leading" secondItem="hAi-5G-bNm" secondAttribute="leading" constant="15" id="g7d-mj-M89"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OqS-GM-bya"/>
+                    <navigationItem key="navigationItem" title="Tarjetas" id="OqS-GM-bya">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tLL-ay-1Se"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tablaTarjetas" destination="lSb-Wj-ekM" id="lkp-Tq-IpX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIB-x4-ZYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3970" y="287"/>
+            <point key="canvasLocation" x="3969.5652173913045" y="286.60714285714283"/>
         </scene>
         <!--Usuario View Controller-->
         <scene sceneID="Tun-R0-cFW">
