@@ -14,17 +14,16 @@ class TarjetaViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     @IBOutlet weak var tablaTarjetas: UITableView!
     
-    var listaTarjetas = [Tarjeta]()
+    var listaTarjetas = [Tarjetas]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.listarPeliculas()
+        self.listarTarjetas()
         tablaTarjetas.dataSource = self
         tablaTarjetas.delegate = self
+      
         
     }
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         listaTarjetas.count
@@ -37,34 +36,61 @@ class TarjetaViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return celda
     }
     
-    func listarPeliculas(){
+    func listarTarjetas(){
+        
         let db = Firestore.firestore()
-        db.collection("tarjeta").getDocuments{
+        db.collection("tarjetas").getDocuments{
             (querySnapshot, err) in
             self.listaTarjetas.removeAll()
             if let err = err {
-                print("Error al traer las tarjetas: \(err)")
+                print("Error al traer las Tarjetas: \(err)")
             }else{
                 for document in querySnapshot!.documents{
-                    let tarjeta = Tarjeta(idTarjeta: document.documentID  , tipo: document.data()["tipo"] as! String, clave: document.data()["clave"] as! Int, fchVencimiento: document.data()["fchVencimiento"] as! String, fchRegistro: document.data()["fchRegistro"] as! String, cvc: document.data()["cvc"] as! Int,dni: document.data()["dni"] as! String)
+                    let tarjeta = Tarjetas(idtarjetas: document.data()["idtarjetas"] as! Int, tipo: document.data()["tipo"] as! String, clave: document.data()["clave"] as! Int, fchVencimiento: document.data()["fchVencimiento"] as! String, fchRegistro: document.data()["fchRegistro"] as! String, cvc: document.data()["cvc"] as! Int, dni: document.data()["dni"] as! String)
                     
                     self.listaTarjetas.append(tarjeta)
                     self.tablaTarjetas.reloadData()
                 }
             }
         }
+    
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
-        
-        let destinationVc = segue.destination as! TarjetaFormViewController
-        destinationVc.tarjetaForm.idTarjeta = "12345645678910"
-        
-        let destinationVc2 = segue.destination as! TarjetaFormViewController
-        destinationVc2.tarjetaForm.dni = "1457894121"
+       let destinationVc = segue.destination as! TarjetaFormViewController
+        destinationVc.tarjetaForm.idtarjetas = listaTarjetas.count + 1
     }
-
-   
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let editar = UITableViewRowAction(style: .normal, title: "EDITAR"){
+            (action,indexPath) in
+            print("editando: " + String(self.listaTarjetas[indexPath.row].idtarjetas))
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "TarjetaFormViewController") as! TarjetaFormViewController
+            
+            vc.tarjetaForm = self.listaTarjetas[indexPath.row]
+         
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        editar.backgroundColor = UIColor.blue
+        
+        let eliminar = UITableViewRowAction(style: .destructive, title: "ELIMINAR"){
+            (action,indexPath) in
+            print("eliminando: " + String(self.listaTarjetas[indexPath.row].idtarjetas))
+            let db = Firestore.firestore()
+            let peliculaReference = db.collection("tarjetas").document(String(self.listaTarjetas[indexPath.row].idtarjetas)
+            )
+            peliculaReference.delete()
+            self.listarTarjetas()
+        }
+        
+        return [editar,eliminar]
+    }
+    
+    
+    
+  
+    
 }

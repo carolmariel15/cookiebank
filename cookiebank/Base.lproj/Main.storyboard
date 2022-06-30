@@ -594,7 +594,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="D3v-eh-tsO">
                                 <rect key="frame" x="15" y="59" width="384" height="453.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nro: de Tarjeta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbG-LX-13c">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Tarjeta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbG-LX-13c">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -644,12 +644,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkS-rD-xKH">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkS-rD-xKH">
                                         <rect key="frame" x="0.0" y="265.5" width="384" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FECHA DE REGISTRO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uij-fP-dca">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NRO: DE TARJETA:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uij-fP-dca">
                                         <rect key="frame" x="0.0" y="302.5" width="384" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -671,13 +671,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W6T-O4-gqK">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="W6T-O4-gqK">
                                         <rect key="frame" x="0.0" y="423.5" width="384" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="151-hi-Dl3">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <state key="normal" title="Registrar"/>
+                                                <connections>
+                                                    <action selector="Registrar:" destination="EAa-Zz-8OG" eventType="touchUpInside" id="NAI-YS-PDv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -694,13 +697,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Registro de Tarjeta" id="1aM-an-mhh"/>
                     <connections>
-                        <outlet property="txtClave" destination="Ckc-NP-zLW" id="EYO-6b-6lS"/>
-                        <outlet property="txtDni" destination="xkS-rD-xKH" id="VF5-Zi-m6f"/>
-                        <outlet property="txtFechaReg" destination="jtr-eK-rjh" id="ydX-VO-SOM"/>
-                        <outlet property="txtIdTarjeta" destination="Cnp-7t-zBa" id="btE-DT-HhD"/>
-                        <outlet property="txtTipo" destination="eh7-FP-QoF" id="tPR-me-xGa"/>
-                        <outlet property="txtcvc" destination="aUa-L4-nSI" id="ke6-Rk-PiJ"/>
-                        <outlet property="txtmmaa" destination="l3z-mj-AMW" id="4LE-I2-WgK"/>
+                        <outlet property="txtCVC" destination="aUa-L4-nSI" id="cNX-hq-n01"/>
+                        <outlet property="txtClave" destination="Ckc-NP-zLW" id="Avl-pj-bTK"/>
+                        <outlet property="txtDni" destination="xkS-rD-xKH" id="md5-H8-tKI"/>
+                        <outlet property="txtFechereg" destination="jtr-eK-rjh" id="zgH-e5-OzF"/>
+                        <outlet property="txtIdTarjeta" destination="Cnp-7t-zBa" id="a4G-0h-GHa"/>
+                        <outlet property="txtMMAA" destination="l3z-mj-AMW" id="wRx-kp-dyK"/>
+                        <outlet property="txtTipo" destination="eh7-FP-QoF" id="Gna-R0-7cV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Erh-Ha-wVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

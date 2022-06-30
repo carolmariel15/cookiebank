@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		766F0FDB286D703F00396E13 /* TarjetaFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766F0FDA286D703F00396E13 /* TarjetaFormViewController.swift */; };
+		766F0FE1286DB2FF00396E13 /* Tarjetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766F0FE0286DB2FF00396E13 /* Tarjetas.swift */; };
 		C52CD63D286CCE6D00D11C32 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CD63C286CCE6D00D11C32 /* Usuario.swift */; };
 		C52CD63F286CCE7E00D11C32 /* Transaccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CD63E286CCE7E00D11C32 /* Transaccion.swift */; };
 		C52CD641286CCE8C00D11C32 /* Cuenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CD640286CCE8C00D11C32 /* Cuenta.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		766F0FDA286D703F00396E13 /* TarjetaFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetaFormViewController.swift; sourceTree = "<group>"; };
+		766F0FE0286DB2FF00396E13 /* Tarjetas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarjetas.swift; sourceTree = "<group>"; };
 		C52CD63C286CCE6D00D11C32 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		C52CD63E286CCE7E00D11C32 /* Transaccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaccion.swift; sourceTree = "<group>"; };
 		C52CD640286CCE8C00D11C32 /* Cuenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuenta.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				C52CD63E286CCE7E00D11C32 /* Transaccion.swift */,
 				C52CD640286CCE8C00D11C32 /* Cuenta.swift */,
 				C52CD642286CCE9C00D11C32 /* Tarjeta.swift */,
+				766F0FE0286DB2FF00396E13 /* Tarjetas.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				C52E5B4B285FE18D00391EFE /* SceneDelegate.swift in Sources */,
 				C52CD63F286CCE7E00D11C32 /* Transaccion.swift in Sources */,
 				C55CEB6B286CBEBA007227A3 /* MenuViewController.swift in Sources */,
+				766F0FE1286DB2FF00396E13 /* Tarjetas.swift in Sources */,
 				C52CD63D286CCE6D00D11C32 /* Usuario.swift in Sources */,
 				C52CD643286CCE9C00D11C32 /* Tarjeta.swift in Sources */,
 			);
