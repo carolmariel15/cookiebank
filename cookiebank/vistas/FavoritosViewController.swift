@@ -12,7 +12,7 @@ import FirebaseFirestore
 class FavoritosViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
    
     
-
+    var dni = ""
     @IBOutlet weak var TablaFavoritos: UITableView!
    
     var listaFavoritos = [Favorito]()
@@ -39,28 +39,36 @@ class FavoritosViewController: UIViewController, UITableViewDelegate,UITableView
 
     func listarFavoritos(){
         
+        if let dniUsu = UserDefaults.standard.string(forKey: "dni") {
+        
+            self.dni = dniUsu
         let db = Firestore.firestore()
-        db.collection("favoritos").getDocuments{
+            db.collection("favoritos").whereField("dni", isEqualTo: dniUsu).getDocuments{
             (querySnapshot, err) in
             self.listaFavoritos.removeAll()
             if let err = err {
                 print("Error al traer las Favoritos: \(err)")
             }else{
                 for document in querySnapshot!.documents{
-                    let favorito = Favorito(idfavorito: document.data()["idfavorito"] as! Int, nrocuenta: document.data()["nrocuenta"] as! String, descripcion: document.data()["descripcion"] as! String, fecha: document.data()["fecha"] as! String)
+                    let favorito = Favorito(idfavorito: document.data()["idfavorito"] as! Int, nrocuenta: document.data()["nrocuenta"] as! String, descripcion: document.data()["descripcion"] as! String, fecha: document.data()["fecha"] as! String,dni: document.data()["dni"] as! String)
                     
                     self.listaFavoritos.append(favorito)
                     self.TablaFavoritos.reloadData()
                 }
             }
         }
-    
+        }else{
+            print("Dni es null")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
           
          let destinationVc = segue.destination as! FavoritoFormViewController
           destinationVc.favoritoForm.idfavorito = listaFavoritos.count + 1
+        
+        destinationVc.favoritoForm.dni = self.dni
+        
       }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

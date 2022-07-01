@@ -20,7 +20,8 @@ class FavoritoFormViewController: UIViewController {
     @IBOutlet weak var txtDescripcion: UITextField!
     
     
-    var favoritoForm: Favorito = Favorito(idfavorito: 0, nrocuenta: "", descripcion: "", fecha: "")
+    var favoritoForm: Favorito = Favorito(idfavorito: 0, nrocuenta: "", descripcion: "", fecha: "", dni: "")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class FavoritoFormViewController: UIViewController {
     @IBAction func Registrar(_ sender: Any) {
         
         let favoritoToSave = ["idfavorito": Int(txtIdFavorito.text!)!,
-                              "nrocuenta": txtCuenta.text!, "descripcion": txtDescripcion.text!,"fecha": txtFecha.text!
+                              "nrocuenta": txtCuenta.text!, "descripcion": txtDescripcion.text!,"fecha": txtFecha.text!,"dni": self.favoritoForm.dni
         ]as[String:Any ]
             
         let db = Firestore.firestore()

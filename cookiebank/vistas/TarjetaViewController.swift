@@ -14,6 +14,7 @@ class TarjetaViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     @IBOutlet weak var tablaTarjetas: UITableView!
     
+    var dni = ""
     var listaTarjetas = [Tarjetas]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +38,11 @@ class TarjetaViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     func listarTarjetas(){
-        
+    
+        if let dniUsu = UserDefaults.standard.string(forKey: "dni") {
+            self.dni = dniUsu
         let db = Firestore.firestore()
-        db.collection("tarjetas").getDocuments{
+            db.collection("tarjetas").whereField("dni", isEqualTo: dniUsu).getDocuments{
             (querySnapshot, err) in
             self.listaTarjetas.removeAll()
             if let err = err {
@@ -53,13 +56,18 @@ class TarjetaViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 }
             }
         }
-    
+        }else{
+            print("Dni es null")
+        }
     }
     
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
        let destinationVc = segue.destination as! TarjetaFormViewController
         destinationVc.tarjetaForm.idtarjetas = listaTarjetas.count + 1
+    
+    destinationVc.tarjetaForm.dni = self.dni
+    
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

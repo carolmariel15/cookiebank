@@ -12,15 +12,16 @@ class Favorito {
     var nrocuenta: String
     var descripcion: String
     var fecha: String
+    var dni:String
     
     
-    init(idfavorito: Int, nrocuenta: String, descripcion: String, fecha: String){
+    init(idfavorito: Int, nrocuenta: String, descripcion: String, fecha: String, dni:String){
         
         self.idfavorito = idfavorito
         self.nrocuenta = nrocuenta
         self.descripcion = descripcion
         self.fecha = fecha
-       
+        self.dni = dni
     
         
     }
